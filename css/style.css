@@ -1,0 +1,533 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #111;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* ========== NAVBAR ========== */
+header {
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #d4af37;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #d4af37;
+}
+
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #d4af37;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #b8962f;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* ========== INTRO SECTION ========== */
+.intro {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: #1a1a1a;
+}
+
+.intro .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro h2 {
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* ========== SERVICES PREVIEW (Home) ========== */
+.services-preview {
+  background-color: #111;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.services-preview h2 {
+  color: #d4af37;
+  margin-bottom: 40px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  width: 260px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-box i {
+  font-size: 2.5em;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.service-box:hover {
+  background-color: #222;
+  transform: translateY(-5px);
+}
+
+/* ========== GALLERY SECTION ========== */
+.gallery {
+  background-color: #1a1a1a;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: #d4af37;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* ========== TESTIMONIALS ========== */
+.testimonials {
+  background-color: #111;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.testimonial-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #ccc;
+}
+
+/* ========== PAGE HEADERS (About, Services, Contact) ========== */
+.page-header {
+  text-align: center;
+  background-color: #000;
+  padding: 80px 20px;
+}
+
+.page-header h1 {
+  color: #d4af37;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* ========== ABOUT PAGE ========== */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 70px 20px;
+  background-color: #1a1a1a;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-content {
+  flex: 1 1 400px;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.mission {
+  background-color: #111;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.mission h2 {
+  color: #d4af37;
+  margin-bottom: 30px;
+}
+
+.mission-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.mission-item {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+}
+
+.mission-item i {
+  color: #d4af37;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* TEAM SECTION */
+.team {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: #1a1a1a;
+}
+
+.team h2 {
+  color: #d4af37;
+  margin-bottom: 30px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-card {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+}
+
+.team-card img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ========== SERVICES PAGE ========== */
+.services-page {
+  background-color: #1a1a1a;
+  padding: 70px 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.service-card {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background-color: #222;
+}
+
+.service-card i {
+  font-size: 2.5em;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 10px;
+  color: #d4af37;
+  font-weight: 700;
+}
+
+/* CTA SECTION */
+.cta {
+  background-color: #000;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.cta-content h2 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+/* ========== CONTACT PAGE ========== */
+.contact-page {
+  background-color: #1a1a1a;
+  padding: 70px 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-form, .contact-info {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1 1 350px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.contact-form button {
+  background-color: #d4af37;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #b8962f;
+}
+
+.form-success {
+  margin-top: 10px;
+  color: #8aff8a;
+}
+
+.contact-info i {
+  color: #d4af37;
+  margin-right: 8px;
+}
+
+.contact-social a {
+  font-size: 1.5em;
+  color: #d4af37;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.contact-social a:hover {
+  color: #fff;
+}
+
+.wa-inline i {
+  color: #25D366;
+  margin-left: 8px;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+
+.wa-inline i:hover {
+  color: #1eb155;
+}
+
+
+/* MAP SECTION */
+.map-section {
+  background-color: #111;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.map-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #000;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  color: #d4af37;
+  font-size: 1.4em;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .about-container,
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .service-container {
+    flex-direction: column;
+  }
+}
